@@ -12,7 +12,16 @@ arachne runs on Python 2.7. It is highly recommended you make a virtualenv for y
 :~/dev# git clone https://github.com/gzzo/arachne
 :~/dev# cd arachne
 :~/dev/arachne# virtualenv-2.7 .
+```
+
+For old versions of virtualenv, there is an included script to set your PATH:
+```bash
 :~/dev/arachne# . setpath
+```
+
+Otherwise, it is recommended to use the included activate script:
+```bash
+:~/dev/arachne# . bin/activate
 :~/dev/arachne# python setup.py install
 ```
 
