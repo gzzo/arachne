@@ -1,0 +1,13 @@
+priority
+--------
++ use simple http server to set up a test suite
++ add eventlet as an option for Chooser
+
+gevent
+-----
++ fix gevent ntoi support for gevent on smtp_send
+
+celery
+-----
++ start using task.collect for celery runtime
++ possibly add an option for celery to write out to a database
