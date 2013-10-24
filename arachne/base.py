@@ -178,15 +178,15 @@ class LocalBase( Base ):
         self.status_good += 1
         out_name = get_out_name(self.name, self.args.job_name, self.args.out_file)
         with open(path.join(out_dir, out_name), 'a+') as f:
-            print >> f, out_item
+            print >> f, out_item.encode('utf8')
 
     def err_base(self, err_item):
         err_name = get_out_name(self.name, self.args.job_name, self.args.out_file)
         with open(path.join(err_dir, err_name),'a+') as f:
-            print >> f, err_item
+            print >> f, err_item.encode('utf8')
 
     def log_base(self, log_item):
-        print(log_item)
+        print(log_item.encode('utf8'))
 
     ## certain scripts format their output in a specific way, just a placeholder here
     def out_format(self, item, out):

@@ -44,6 +44,8 @@ def gen_url(url, p):
 ## for each parameter, add to the value the change argument
 ## optionally we don't keep the initial value
 def replace_params(url, change, keep_original=True):
+    if url.count('?') != 1:
+        return []
     link, param = url.split('?')
     params = parse_params(param)
 
