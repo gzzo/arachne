@@ -39,7 +39,7 @@ def base_scrape_proxy(num, browser_args):
 				span_text = span.text_content()
 				if re.search('\d', span_text):
 					ip += span_text + '.'
-		ips.append(ip[:-1])
+		ips.append(ip[:-1] + ':' + port)
 	return ips
 
 @celery.task(name='arachne.scripts.scrape_proxy')
